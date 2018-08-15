@@ -9,7 +9,7 @@ import App from './../imports/ui/App'
 Meteor.startup(() => {Tracker.autorun(() => {
     let players = Players.find({}, {sort: {score: -1}}).fetch();
     let positionedPlayers = calculatePlayerPositions(players);
-    let title = 'Score Keep';
+    let title = 'Farkle Scoreboard!';
     ReactDOM.render(<App players={positionedPlayers} title={title}/>, document.getElementById('app'));
   });
 });
