@@ -31,9 +31,9 @@ class AddPlayer extends React.Component {
   };
 
   handleName(e) {
+    e.preventDefault();
     let playerName = e.target.value;
     this.setState({ name: playerName });
-    e.preventDefault();
   }
 
   onSubmit(e) {
